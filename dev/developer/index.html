@@ -111,9 +111,30 @@
 
     subgraph Pullback
         value_and_pullback!
-    end</div><script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    end</div><h3 id="Second-order,-scalar-valued-functions"><a class="docs-heading-anchor" href="#Second-order,-scalar-valued-functions">Second order, scalar-valued functions</a><a id="Second-order,-scalar-valued-functions-1"></a><a class="docs-heading-anchor-permalink" href="#Second-order,-scalar-valued-functions" title="Permalink"></a></h3><div class="mermaid">flowchart LR
+    subgraph First order
+        gradient!
+        value_and_pushforward!
+    end
+
+    subgraph Hessian-vector product
+        gradient_and_hessian_vector_product!
+        gradient_and_hessian_vector_product --&gt; gradient_and_hessian_vector_product!
+    end
+
+    gradient_and_hessian_vector_product! --&gt; gradient!
+    gradient_and_hessian_vector_product! --&gt; value_and_pushforward!
+
+    subgraph Hessian
+        value_and_gradient_and_hessian!
+        value_and_gradient_and_hessian --&gt; value_and_gradient_and_hessian!
+        hessian! --&gt; value_and_gradient_and_hessian!
+        hessian --&gt; value_and_gradient_and_hessian
+    end
+
+    value_and_gradient_and_hessian! --&gt; |n|gradient_and_hessian_vector_product!</div><script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({
     startOnLoad: true,
     theme: "neutral"
 });
-</script></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../backends/">« Backends</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.3.0 on <span class="colophon-date" title="Friday 15 March 2024 16:03">Friday 15 March 2024</span>. Using Julia version 1.10.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+</script></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../backends/">« Backends</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.3.0 on <span class="colophon-date" title="Saturday 16 March 2024 09:55">Saturday 16 March 2024</span>. Using Julia version 1.10.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
